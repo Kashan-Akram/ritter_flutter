@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "591585881883",
+    "project_id": "inrizztagram-flutter",
+    "storage_bucket": "inrizztagram-flutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:591585881883:android:5a01df723efdf67142edbe",
+        "android_client_info": {
+          "package_name": "com.example.hehewhoknows.inzzztagram_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "591585881883-ejuv5kkolkb89kh7e2cbel1mjvdpat68.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6j9eErXD1dKPbnjKWY09Slm6K6TunljE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "591585881883-ejuv5kkolkb89kh7e2cbel1mjvdpat68.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
