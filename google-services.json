@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "591585881883",
+    "project_id": "inrizztagram-flutter",
+    "storage_bucket": "inrizztagram-flutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:591585881883:android:5a01df723efdf67142edbe",
+        "android_client_info": {
+          "package_name": "com.example.hehewhoknows.inzzztagram_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "591585881883-b8qeb9kv4p66mi55g62v84jablnv296l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hehewhoknows.inzzztagram_flutter",
+            "certificate_hash": "60f198d2bdbaba665b23902bdcab359a4709b43f"
+          }
+        },
+        {
+          "client_id": "591585881883-42rpd9971hbg9ptbgbs1a46st78hq0j5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6j9eErXD1dKPbnjKWY09Slm6K6TunljE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "591585881883-42rpd9971hbg9ptbgbs1a46st78hq0j5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "591585881883-v8c4hdusg7t7puh776roppdi44h8l62r.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.hehewhoknows.inzzztagramFlutter"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

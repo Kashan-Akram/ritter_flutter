@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:inzzztagram_flutter/state/auth/backend/authenticator.dart';
+import 'package:inzzztagram_flutter/state/auth/providers/auth_state_provider.dart';
 import 'package:inzzztagram_flutter/state/auth/providers/is_logged_in_provider.dart';
 import 'firebase_options.dart';
 
@@ -57,15 +58,17 @@ class MainView extends StatelessWidget {
         centerTitle: true,
         title: const Text("Main View"),
       ),
-      body: Column(
-        children: [
-          TextButton(
-            onPressed: () { },
-            child: const Text("AFTER LOG IN"),
+      body: Consumer(
+          builder: (context, ref, child) {
+            return TextButton(
+              onPressed: () async {
+                await ref.read(authStateProvider.notifier).logOut();
+              },
+              child: const Text("Log Out"),
+              );
+            },
           ),
-        ],
-      ),
-    );
+      );
   }
 }
 
@@ -89,12 +92,12 @@ class LoginView extends StatelessWidget {
               },
               child: const Text("Sign in with google"),
           ),
-          TextButton(
+         /* TextButton(
             onPressed: () async {
               const Authenticator().loginWithFacebook();
             },
             child: const Text("Sign in with facebook"),
-          ),
+          ), */
         ],
       ),
     );
