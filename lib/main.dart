@@ -37,7 +37,7 @@ class App extends StatelessWidget {
           if(isLoggedIn){
             return const MainView();
           }else{
-            return const LoginView();
+            return const MainView();
           }
         },
       ),
@@ -57,7 +57,14 @@ class MainView extends StatelessWidget {
         centerTitle: true,
         title: const Text("Main View"),
       ),
-
+      body: Column(
+        children: [
+          TextButton(
+            onPressed: () { },
+            child: const Text("AFTER LOG IN"),
+          ),
+        ],
+      ),
     );
   }
 }
