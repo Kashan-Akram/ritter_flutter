@@ -8,8 +8,6 @@ import 'package:inzzztagram_flutter/state/posts/typedefs/user_id.dart';
 class Authenticator {
   const Authenticator();
 
-  // getters
-
   bool get isAlreadyLoggedIn => userId != null;
   UserId? get userId => FirebaseAuth.instance.currentUser?.uid;
   String get displayName =>
