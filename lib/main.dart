@@ -72,13 +72,13 @@ class MainView extends StatelessWidget {
   }
 }
 
-class LoginView extends StatelessWidget {
+class LoginView extends ConsumerWidget {
   const LoginView({
     Key? key,
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -87,17 +87,13 @@ class LoginView extends StatelessWidget {
       body: Column(
         children: [
           TextButton(
-              onPressed: () async {
-                const Authenticator().loginWithGoogle();
-              },
+              onPressed: ref.read(authStateProvider.notifier).loginWithGoogle,
               child: const Text("Sign in with google"),
           ),
-         /* TextButton(
-            onPressed: () async {
-              const Authenticator().loginWithFacebook();
-            },
+          TextButton(
+            onPressed: ref.read(authStateProvider.notifier).loginWithFacebook,
             child: const Text("Sign in with facebook"),
-          ), */
+          ),
         ],
       ),
     );
