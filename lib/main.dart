@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:inzzztagram_flutter/state/auth/backend/authenticator.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -25,7 +26,7 @@ class App extends StatelessWidget {
       theme: ThemeData(
         brightness: Brightness.light,
         primarySwatch: Colors.blue,
-      ),
+       ),
       themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
       home: const HomePage(),
@@ -43,6 +44,22 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Hello World!"),
+      ),
+      body: Column(
+        children: [
+          TextButton(
+              onPressed: () async {
+                Authenticator().loginWithGoogle();
+              },
+              child: const Text("Sign in with google"),
+          ),
+          TextButton(
+            onPressed: () async {
+              Authenticator().loginWithFacebook();
+            },
+            child: const Text("Sign in with facebook"),
+          ),
+        ],
       ),
     );
   }
