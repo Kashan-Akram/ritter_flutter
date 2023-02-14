@@ -4,6 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:inzzztagram_flutter/state/auth/backend/authenticator.dart';
 import 'package:inzzztagram_flutter/state/auth/providers/auth_state_provider.dart';
 import 'package:inzzztagram_flutter/state/auth/providers/is_logged_in_provider.dart';
+import 'package:inzzztagram_flutter/views/components/loading/loading_screen.dart';
 import 'firebase_options.dart';
 
 void main() async {
