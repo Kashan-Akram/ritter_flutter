@@ -37,7 +37,7 @@ class App extends StatelessWidget {
           if(isLoggedIn){
             return const MainView();
           }else{
-            return const MainView();
+            return const LoginView();
           }
         },
       ),
