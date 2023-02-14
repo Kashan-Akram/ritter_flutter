@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:inzzztagram_flutter/state/auth/backend/authenticator.dart';
+import 'package:inzzztagram_flutter/state/auth/providers/is_logged_in_provider.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -8,7 +10,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const App());
+  runApp(const ProviderScope(child: App()));
 }
 class App extends StatelessWidget {
   const App({
@@ -29,13 +31,22 @@ class App extends StatelessWidget {
        ),
       themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      home: Consumer(
+        builder: (context, ref, child){
+          final isLoggedIn = ref.watch(isLoggedInProvider);
+          if(isLoggedIn){
+            return const MainView();
+          }else{
+            return const LoginView();
+          }
+        },
+      ),
     );
   }
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({
+class MainView extends StatelessWidget {
+  const MainView({
     Key? key,
   }) : super(key: key);
   
@@ -43,19 +54,37 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Hello World!"),
+        centerTitle: true,
+        title: const Text("Main View"),
+      ),
+
+    );
+  }
+}
+
+class LoginView extends StatelessWidget {
+  const LoginView({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: const Text("Login View"),
       ),
       body: Column(
         children: [
           TextButton(
               onPressed: () async {
-                Authenticator().loginWithGoogle();
+                const Authenticator().loginWithGoogle();
               },
               child: const Text("Sign in with google"),
           ),
           TextButton(
             onPressed: () async {
-              Authenticator().loginWithFacebook();
+              const Authenticator().loginWithFacebook();
             },
             child: const Text("Sign in with facebook"),
           ),
