@@ -6,6 +6,7 @@ import 'package:inzzztagram_flutter/state/auth/providers/auth_state_provider.dar
 import 'package:inzzztagram_flutter/state/auth/providers/is_logged_in_provider.dart';
 import 'package:inzzztagram_flutter/state/providers/is_loading_provider.dart';
 import 'package:inzzztagram_flutter/views/components/loading/loading_screen.dart';
+import 'package:inzzztagram_flutter/views/login/login_view.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -81,33 +82,5 @@ class MainView extends StatelessWidget {
             },
           ),
       );
-  }
-}
-
-class LoginView extends ConsumerWidget {
-  const LoginView({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: const Text("Login View"),
-      ),
-      body: Column(
-        children: [
-          TextButton(
-              onPressed: ref.read(authStateProvider.notifier).loginWithGoogle,
-              child: const Text("Sign in with google"),
-          ),
-          TextButton(
-            onPressed: ref.read(authStateProvider.notifier).loginWithFacebook,
-            child: const Text("Sign in with facebook"),
-          ),
-        ],
-      ),
-    );
   }
 }
