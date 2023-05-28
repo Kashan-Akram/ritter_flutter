@@ -1,0 +1,6 @@
+enum FileType{
+  image,
+  video,
+}
+
+
