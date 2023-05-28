@@ -1,3 +1,4 @@
+import 'package:inzzztagram_flutter/state/post_settings/constants/constants.dart';
 
 enum PostSetting {
   allowLikes(
