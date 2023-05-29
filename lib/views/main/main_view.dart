@@ -31,6 +31,7 @@ class _MainViewState extends ConsumerState<MainView> {
                 FontAwesomeIcons.film,
               ),
               onPressed: () async {
+                /*
                 // pick a video first
                 final videoFile =
                 await ImagePickerHelper.pickVideoFromGallery();
@@ -54,10 +55,15 @@ class _MainViewState extends ConsumerState<MainView> {
                     ),
                   ),
                 );
+                */
               },
             ),
             IconButton(
+              icon: const Icon(
+                Icons.add_photo_alternate_outlined,
+              ),
               onPressed: () async {
+                /*
                 // pick an image first
                 final imageFile =
                 await ImagePickerHelper.pickImageFromGallery();
@@ -81,12 +87,13 @@ class _MainViewState extends ConsumerState<MainView> {
                     ),
                   ),
                 );
+                 */
               },
-              icon: const Icon(
-                Icons.add_photo_alternate_outlined,
-              ),
             ),
             IconButton(
+              icon: const Icon(
+                Icons.logout,
+              ),
               onPressed: () async {
                 final shouldLogOut =
                 await const LogoutDialog().present(context).then(
@@ -96,9 +103,6 @@ class _MainViewState extends ConsumerState<MainView> {
                   await ref.read(authStateProvider.notifier).logOut();
                 }
               },
-              icon: const Icon(
-                Icons.logout,
-              ),
             ),
           ],
           bottom: const TabBar(
@@ -124,8 +128,8 @@ class _MainViewState extends ConsumerState<MainView> {
         body: const TabBarView(
           children: [
             UserPostsView(),
-            SearchView(),
-            HomeView(),
+            UserPostsView(),
+            UserPostsView(),
           ],
         ),
       ),
