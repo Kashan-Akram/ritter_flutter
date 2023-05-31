@@ -2,10 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:inzzztagram_flutter/state/auth/providers/auth_state_provider.dart';
+import 'package:inzzztagram_flutter/state/image_upload/helpers/image_picker_helper.dart';
 import 'package:inzzztagram_flutter/state/image_upload/models/file_type.dart';
+import 'package:inzzztagram_flutter/state/post_settings/providers/post_settings_provider.dart';
 import 'package:inzzztagram_flutter/views/components/dialogs/alert_dialog_model.dart';
 import 'package:inzzztagram_flutter/views/components/dialogs/logout_dialog.dart';
 import 'package:inzzztagram_flutter/views/constants/strings.dart';
+import 'package:inzzztagram_flutter/views/create_new_post/create_new_post_view.dart';
 import 'package:inzzztagram_flutter/views/tabs/user_posts/user_posts_view.dart';
 
 class MainView extends ConsumerStatefulWidget {
@@ -31,10 +34,9 @@ class _MainViewState extends ConsumerState<MainView> {
                 FontAwesomeIcons.film,
               ),
               onPressed: () async {
-                /*
                 // pick a video first
                 final videoFile =
-                await ImagePickerHelper.pickVideoFromGallery();
+                  await ImagePickerHelper.pickVideoFromGallery();
                 if (videoFile == null) {
                   return;
                 }
@@ -55,7 +57,6 @@ class _MainViewState extends ConsumerState<MainView> {
                     ),
                   ),
                 );
-                */
               },
             ),
             IconButton(
@@ -63,10 +64,9 @@ class _MainViewState extends ConsumerState<MainView> {
                 Icons.add_photo_alternate_outlined,
               ),
               onPressed: () async {
-                /*
                 // pick an image first
                 final imageFile =
-                await ImagePickerHelper.pickImageFromGallery();
+                  await ImagePickerHelper.pickImageFromGallery();
                 if (imageFile == null) {
                   return;
                 }
@@ -87,7 +87,6 @@ class _MainViewState extends ConsumerState<MainView> {
                     ),
                   ),
                 );
-                 */
               },
             ),
             IconButton(
