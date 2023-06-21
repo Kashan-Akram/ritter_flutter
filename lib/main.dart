@@ -8,6 +8,7 @@ import 'package:inzzztagram_flutter/views/login/login_view.dart';
 import 'package:inzzztagram_flutter/views/main/main_view.dart';
 import 'firebase_options.dart';
 
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
