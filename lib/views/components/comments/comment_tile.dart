@@ -25,7 +25,7 @@ class CommentTile extends ConsumerWidget {
     );
     return userInfo.when(
       data: (userInfo) {
-        final currentUserId = ref.read(userIDprovider);
+        final currentUserId = ref.read(userIdProvider);
         return ListTile(
           trailing: currentUserId == comment.fromUserId
               ? IconButton(

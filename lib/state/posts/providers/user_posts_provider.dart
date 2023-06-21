@@ -9,7 +9,7 @@ import 'package:inzzztagram_flutter/state/posts/models/post_key.dart';
 
 final userPostsProvider = StreamProvider.autoDispose<Iterable<Post>>(
       (ref) {
-    final userId = ref.watch(userIDprovider);
+    final userId = ref.watch(userIdProvider);
 
     final controller = StreamController<Iterable<Post>>();
 

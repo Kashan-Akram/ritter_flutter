@@ -57,7 +57,7 @@ class _CreateNewPostViewState extends ConsumerState<CreateNewPostView> {
             onPressed: isPostButtonEnabled.value
                 ? () async {
               // get the user id first
-              final userId = ref.read(userIDprovider);
+              final userId = ref.read(userIdProvider);
               if (userId == null) {
                 return;
               }
