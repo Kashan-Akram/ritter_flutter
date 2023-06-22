@@ -64,7 +64,6 @@ class DeletePostStateNotifier extends StateNotifier<IsLoading> {
       for (final post in postInCollection.docs) {
         await post.reference.delete();
       }
-
       return true;
     } catch (_) {
       return false;
