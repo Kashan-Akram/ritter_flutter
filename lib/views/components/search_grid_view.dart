@@ -4,7 +4,7 @@ import 'package:inzzztagram_flutter/state/posts/providers/posts_by_search_term_p
 import 'package:inzzztagram_flutter/views/components/animations/data_not_found_animation.dart';
 import 'package:inzzztagram_flutter/views/components/animations/empty_contents_with_text.dart';
 import 'package:inzzztagram_flutter/views/components/animations/error_animation.dart';
-import 'package:inzzztagram_flutter/views/components/post/posts_grid_view.dart';
+import 'package:inzzztagram_flutter/views/components/post/posts_sliver_grid_view.dart';
 import 'package:inzzztagram_flutter/views/constants/strings.dart';
 
 class SearchGridView extends ConsumerWidget {
@@ -18,8 +18,10 @@ class SearchGridView extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     if (searchTerm.isEmpty) {
-      return const EmptyContentsWithTextAnimationView(
-        text: Strings.enterYourSearchTerm,
+      return const SliverToBoxAdapter(
+        child: EmptyContentsWithTextAnimationView(
+          text: Strings.enterYourSearchTerm,
+        ),
       );
     }
 
@@ -32,19 +34,25 @@ class SearchGridView extends ConsumerWidget {
     return posts.when(
       data: (posts) {
         if (posts.isEmpty) {
-          return const DataNotFoundAnimationView();
+          return const SliverToBoxAdapter(
+            child: DataNotFoundAnimationView(),
+          );
         } else {
-          return PostsGridView(
+          return PostsSliverGridView(
             posts: posts,
           );
         }
       },
       error: (error, stackTrace) {
-        return const ErrorAnimationView();
+        return const SliverToBoxAdapter(
+          child: ErrorAnimationView(),
+        );
       },
       loading: () {
-        return const Center(
-          child: CircularProgressIndicator(),
+        return const SliverToBoxAdapter(
+          child: Center(
+            child: CircularProgressIndicator(),
+          ),
         );
       },
     );
