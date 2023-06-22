@@ -9,6 +9,7 @@ import 'package:inzzztagram_flutter/views/components/dialogs/alert_dialog_model.
 import 'package:inzzztagram_flutter/views/components/dialogs/logout_dialog.dart';
 import 'package:inzzztagram_flutter/views/constants/strings.dart';
 import 'package:inzzztagram_flutter/views/create_new_post/create_new_post_view.dart';
+import 'package:inzzztagram_flutter/views/tabs/home/home_view.dart';
 import 'package:inzzztagram_flutter/views/tabs/search/search_view.dart';
 import 'package:inzzztagram_flutter/views/tabs/user_posts/user_posts_view.dart';
 
@@ -129,7 +130,7 @@ class _MainViewState extends ConsumerState<MainView> {
           children: [
             UserPostsView(),
             SearchView(),
-            UserPostsView(),
+            HomeView(),
           ],
         ),
       ),
