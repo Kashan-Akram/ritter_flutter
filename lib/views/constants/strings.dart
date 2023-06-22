@@ -15,7 +15,7 @@ class Strings {
   static const google = 'Google';
   static const googleSignupUrl = 'https://accounts.google.com/signup';
   static const logIntoYourAccount =
-      'Log into your account using one of the options below.';
+      'Log in with your google account';
   static const comments = 'Comments';
   static const writeYourCommentHere = 'Write your comment here...';
   static const checkOutThisPost = 'Check out this post!';
@@ -33,6 +33,6 @@ class Strings {
   // login view rich text at bottom
   static const dontHaveAnAccount = "Don't have an account?\n";
   static const signUpOn = 'Sign up on ';
-  static const orCreateAnAccountOn = ' or create an account on ';
+  static const orCreateAnAccountOn = 'Create an account on ';
   const Strings._();
 }

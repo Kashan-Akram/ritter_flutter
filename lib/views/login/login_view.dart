@@ -53,7 +53,7 @@ class LoginView extends ConsumerWidget {
                 onPressed: ref.read(authStateProvider.notifier).loginWithGoogle,
                 child: const GoogleButton(),
               ),
-              const SizedBox(
+              /*const SizedBox(
                 height: 20,
               ),
               TextButton(
@@ -64,7 +64,7 @@ class LoginView extends ConsumerWidget {
                 onPressed:
                 ref.read(authStateProvider.notifier).loginWithFacebook,
                 child: const FacebookButton(),
-              ),
+              ), */
               const SizedBox(
                 height: 10,
               ),
