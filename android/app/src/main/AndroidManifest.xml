@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.hehewhoknows.inzzztagram_flutter">
    <application
-        android:label="inzzztagram_flutter"
+        android:label="Ritter"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

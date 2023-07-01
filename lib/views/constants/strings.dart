@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 
 @immutable
 class Strings {
-  static const appName = 'Inzzztagram!';
+  static const appName = 'Ritter';
   static const welcomeToAppName = 'Welcome to ${Strings.appName}';
   static const youHaveNoPosts =
       'You have not made a post yet. Press either the video-upload or the photo-upload buttons to the top of the screen in order to upload your first post!';
@@ -15,7 +15,7 @@ class Strings {
   static const google = 'Google';
   static const googleSignupUrl = 'https://accounts.google.com/signup';
   static const logIntoYourAccount =
-      'Log in with your google account';
+      'Log in with your google account or your facebook account';
   static const comments = 'Comments';
   static const writeYourCommentHere = 'Write your comment here...';
   static const checkOutThisPost = 'Check out this post!';
@@ -33,6 +33,6 @@ class Strings {
   // login view rich text at bottom
   static const dontHaveAnAccount = "Don't have an account?\n";
   static const signUpOn = 'Sign up on ';
-  static const orCreateAnAccountOn = 'Create an account on ';
+  static const orCreateAnAccountOn = '\nOr Create an account on ';
   const Strings._();
 }

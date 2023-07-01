@@ -17,7 +17,7 @@ class LoginViewSignupLinks extends StatelessWidget {
         BaseText.plain(
           text: Strings.dontHaveAnAccount,
         ),
-        /* BaseText.plain(
+         BaseText.plain(
           text: Strings.signUpOn,
         ),
         BaseText.link(
@@ -30,7 +30,7 @@ class LoginViewSignupLinks extends StatelessWidget {
             );
           },
         ),
-        */BaseText.plain(
+        BaseText.plain(
           text: Strings.orCreateAnAccountOn,
         ),
         BaseText.link(
